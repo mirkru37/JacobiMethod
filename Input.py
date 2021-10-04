@@ -6,7 +6,7 @@ def upper(min_, message=""):
     if Validation.is_int(n):
         if int(n) >= int(min_):
             return int(n)
-    return upper(message)
+    return upper(min_, message)
 
 
 def between(min_, max_, message=""):

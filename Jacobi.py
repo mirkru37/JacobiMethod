@@ -21,9 +21,9 @@ def jacobi(matrix, accuracy=0.0001):
     steps = []
     for i, var in enumerate(matrix):
         sum_ = 0
-        for j in var[:-1]:
+        for j, v in enumerate(var[:-1]):
             if j != i:
-                sum_ += j
+                sum_ += abs(v)
         if abs(matrix[i][i]) < sum_:
             return None, None
         x.append(Fraction(var[-1] / var[i]))
